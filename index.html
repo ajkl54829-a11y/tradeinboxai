@@ -9,9 +9,14 @@
     <style>
         body { font-family: 'Outfit', sans-serif; background: #000; color: #fff; margin:0; scroll-behavior: smooth; }
         .gold { color: #d4af37; }
+        .bg-gold { background: #d4af37; }
         .border-gold { border: 1px solid rgba(212, 175, 55, 0.4); }
         input[type=range] { -webkit-appearance: none; width: 100%; background: #333; height: 8px; border-radius: 10px; cursor: pointer; margin: 15px 0; }
         input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 24px; width: 24px; background: #d4af37; border-radius: 50%; border: 2px solid #fff; }
+        /* FORM CONTRAST FIX */
+        .form-field { background: #1a1a1a !important; border: 1px solid #444 !important; color: white !important; transition: all 0.2s; }
+        .form-field:focus { border-color: #d4af37 !important; background: #222 !important; outline: none; }
+        .form-field::placeholder { color: #666; font-weight: 400; }
     </style>
 </head>
 <body class="bg-black">
@@ -23,139 +28,10 @@
 
     <header class="py-24 px-6 text-center max-w-5xl mx-auto border-b border-zinc-900">
         <span class="gold font-bold tracking-[0.4em] uppercase block mb-4 text-sm">Cincinnati Pilot 2026</span>
-        <h1 class="text-6xl md:text-8xl font-black uppercase italic mb-6">SILENCE IS <span class="gold">POVERTY.</span></h1>
-        <p class="text-zinc-400 text-xl md:text-2xl mb-12 font-light">While you're working, your phone is losing you money. Let's fix it.</p>
+        <h1 class="text-6xl md:text-8xl font-black uppercase italic mb-6 leading-none text-white">SILENCE IS <span class="gold">EXPENSIVE.</span></h1>
+        <p class="text-zinc-400 text-xl md:text-2xl mb-12 font-light italic">"I'll call you back" is the most expensive sentence in your business.</p>
         <a href="#apply" class="bg-[#d4af37] text-black px-12 py-6 font-black uppercase text-2xl inline-block shadow-2xl hover:scale-105 transition-transform">Get Your Systems Audit</a>
     </header>
 
     <section class="py-24 bg-zinc-950">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-12">
-                
-                <div class="relative p-8 border border-red-900/50 bg-black">
-                    <span class="absolute -top-4 left-6 bg-red-600 text-white px-4 py-1 text-xs font-black uppercase">The Problem</span>
-                    <h3 class="text-2xl font-black mb-4 uppercase mt-2 text-red-500 italic underline underline-offset-8">Revenue Leakage</h3>
-                    <p class="text-zinc-400 leading-relaxed text-lg">Every time a potential customer hits your voicemail, there is a <b>67% chance</b> they will never call back. You are spending marketing dollars to drive leads to a dead end.</p>
-                </div>
-
-                <div class="relative p-8 border border-zinc-800 bg-black">
-                    <span class="absolute -top-4 left-6 bg-white text-black px-4 py-1 text-xs font-black uppercase">The Cause</span>
-                    <h3 class="text-2xl font-black mb-4 uppercase mt-2 italic underline underline-offset-8">The "Busy" Paradox</h3>
-                    <p class="text-zinc-400 leading-relaxed text-lg">You’re a victim of your own success. You're too busy on-site to handle the influx of calls, but you can't afford a full-time office manager who costs $45k/year plus benefits.</p>
-                </div>
-
-                <div class="relative p-8 border border-gold bg-black">
-                    <span class="absolute -top-4 left-6 bg-gold text-black px-4 py-1 text-xs font-black uppercase">The Solution</span>
-                    <h3 class="text-2xl font-black mb-4 uppercase mt-2 gold italic underline underline-offset-8">TradeInbox AI</h3>
-                    <p class="text-zinc-400 leading-relaxed text-lg">A 24/7 AI-driven gatekeeper that answers every call, qualifies every lead, and books jobs directly into your calendar. It never sleeps, never takes a lunch break, and never misses a check.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-zinc-900/30 border-y border-zinc-800">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-4xl md:text-5xl font-black mb-8 uppercase italic leading-tight">Quantify Your <span class="text-red-600">Loss</span></h2>
-                <p class="text-zinc-400 text-lg mb-8 leading-relaxed font-bold">Slide the bars to see exactly how much revenue you are handing to the competition every single week in Cincinnati.</p>
-            </div>
-
-            <div class="border-gold bg-black p-10 shadow-2xl rounded-sm">
-                <div class="space-y-10">
-                    <div>
-                        <div class="flex justify-between text-xs font-black uppercase mb-4 text-zinc-500 tracking-widest">
-                            <span>Missed Calls / Week: <span id="cV" class="text-white text-lg ml-2">2</span></span>
-                        </div>
-                        <input type="range" id="cS" min="1" max="25" value="2">
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-xs font-black uppercase mb-4 text-zinc-500 tracking-widest">
-                            <span>Avg Job Value: <span id="vD" class="text-white text-lg ml-2">$500</span></span>
-                        </div>
-                        <input type="range" id="vS" min="500" max="5000" step="100" value="500">
-                    </div>
-                    
-                    <div class="pt-10 border-t border-zinc-800 text-center">
-                        <div class="text-6xl md:text-7xl font-black gold mb-2 tracking-tighter">$<span id="aL">52,000</span></div>
-                        <p class="text-[12px] uppercase text-zinc-500 font-black mb-8 tracking-[0.3em]">Total Annual Revenue Leakage</p>
-                        
-                        <div class="bg-zinc-900 p-8 text-left border-l-4 border-gold">
-                            <p class="text-[16px] text-zinc-300 leading-relaxed font-bold">
-                                <span class="text-white block mb-2 underline decoration-gold underline-offset-4">LOGIC:</span> 
-                                Missing <span id="eC" class="gold">2</span> calls/week = <span id="eY" class="gold">104</span> lost jobs/year. 
-                                At <span id="eV" class="gold">$500</span>/job, you are handing <strong class="gold text-xl underline">$<span id="eT">52,000</span></strong> directly to your competitors.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 text-center bg-black">
-        <h2 class="text-3xl font-black mb-12 uppercase italic text-zinc-600">The 24/7 AI Demo</h2>
-        <div class="max-w-4xl mx-auto border-gold p-2 bg-zinc-900 shadow-2xl">
-            <div style="width: 100%; padding-top: 56.25%; position: relative;">
-                <iframe src="https://app.visla.us/embed/1470182013758685650" frameborder="0" allow="fullscreen *" style="position: absolute; top:0; left:0; width:100%; height:100%;"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <section id="apply" class="py-24 bg-gold text-black text-center">
-        <div class="max-w-xl mx-auto px-6">
-            <h2 class="text-5xl font-black mb-4 uppercase tracking-tighter">Secure Your Spot</h2>
-            <p class="font-bold mb-12 uppercase tracking-widest text-sm opacity-70">Strictly limited to 5 Cincinnati trades.</p>
-            <form action="https://formspree.io/f/xykdkakk" method="POST" class="space-y-4 text-left">
-                <input type="text" name="name" placeholder="YOUR NAME" class="w-full p-5 bg-black text-white font-bold" required>
-                <input type="text" name="company" placeholder="COMPANY NAME" class="w-full p-5 bg-black text-white font-bold" required>
-                <input type="email" name="email" placeholder="EMAIL" class="w-full p-5 bg-black text-white font-bold" required>
-                <input type="tel" name="phone" placeholder="PHONE" class="w-full p-5 bg-black text-white font-bold" required>
-                <button type="submit" class="w-full py-6 bg-zinc-900 text-gold font-black uppercase text-xl shadow-xl hover:bg-zinc-800 transition-all">Request Systems Audit</button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="bg-black py-20 px-6 border-t border-zinc-900 text-zinc-500 font-bold uppercase tracking-widest text-xs">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-white text-xl font-black italic underline decoration-gold underline-offset-4">TRADEINBOXAI // CINCINNATI</div>
-            <div class="text-center md:text-right">
-                <p class="text-white text-sm mb-1">(513) 586-6555</p>
-                <p>alan@tradeinboxai.com</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const cS = document.getElementById('cS'); 
-        const vS = document.getElementById('vS');
-        const cV = document.getElementById('cV');
-        const vD = document.getElementById('vD');
-        const aL = document.getElementById('aL');
-        const eC = document.getElementById('eC');
-        const eY = document.getElementById('eY');
-        const eV = document.getElementById('eV');
-        const eT = document.getElementById('eT');
-
-        function update() {
-            const calls = parseInt(cS.value);
-            const val = parseInt(vS.value);
-            const yearly = calls * 52;
-            const leak = yearly * val;
-
-            cV.textContent = calls;
-            vD.textContent = '$' + val.toLocaleString();
-            aL.textContent = leak.toLocaleString();
-            
-            eC.textContent = calls;
-            eY.textContent = yearly;
-            eV.textContent = '$' + val.toLocaleString();
-            eT.textContent = leak.toLocaleString();
-        }
-
-        cS.addEventListener('input', update);
-        vS.addEventListener('input', update);
-        update();
-    </script>
-</body>
-</html>
+        <div class="max
