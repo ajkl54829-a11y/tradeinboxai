@@ -8,141 +8,67 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Outfit', sans-serif; background: #000; color: #fff; margin:0; }
-        .gold-glow { text-shadow: 0 0 20px rgba(212, 175, 55, 0.5); color: #d4af37; }
-        .premium-border { border: 1px solid rgba(212, 175, 55, 0.3); }
-        .grid-bg { background-image: radial-gradient(circle, #1a1a1a 1px, transparent 1px); background-size: 30px 30px; }
-        input[type=range] { -webkit-appearance: none; background: #27272a; height: 4px; border-radius: 5px; }
-        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 18px; width: 18px; background: #d4af37; border-radius: 50%; cursor: pointer; }
+        .gold { color: #d4af37; }
+        .bg-gold { background: #d4af37; }
+        .border-gold { border: 1px solid rgba(212, 175, 55, 0.4); }
+        .gold-glow { text-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
+        input[type=range] { -webkit-appearance: none; width: 100%; background: #333; height: 6px; border-radius: 10px; }
+        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 20px; width: 20px; background: #d4af37; border-radius: 50%; cursor: pointer; border: 2px solid #fff; }
     </style>
 </head>
-<body class="grid-bg">
+<body class="bg-black">
 
-    <nav class="p-6 border-b border-white/10 flex justify-between items-center bg-black/90 sticky top-0 z-50">
-        <div class="text-2xl font-black uppercase">TRADEINBOX<span class="text-[#d4af37]">AI</span></div>
-        <a href="tel:+15135866555" class="text-[#d4af37] font-bold underline">(513) 586-6555</a>
+    <nav class="p-6 border-b border-zinc-800 flex justify-between items-center bg-black sticky top-0 z-50">
+        <div class="text-2xl font-black uppercase tracking-tighter">TRADEINBOX<span class="gold">AI</span></div>
+        <a href="tel:+15135866555" class="gold font-bold text-lg underline underline-offset-4 decoration-2">(513) 586-6555</a>
     </nav>
 
-    <header class="py-20 px-6 text-center max-w-5xl mx-auto">
-        <span class="text-[#d4af37] font-bold tracking-[0.3em] uppercase block mb-4">Cincinnati Pilot 2026</span>
-        <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase italic">Your Silence is <span class="text-[#d4af37]">Deafening.</span></h1>
-        <p class="text-xl text-gray-400 mb-10">Every missed call is a check handed to your competitor. We build the AI infrastructure to stop the leak.</p>
-        <a href="#apply" class="bg-[#d4af37] text-black px-10 py-5 font-black uppercase text-xl inline-block">Secure Your Territory</a>
+    <header class="py-24 px-6 text-center max-w-5xl mx-auto">
+        <span class="gold font-bold tracking-[0.4em] uppercase block mb-6 text-sm">Cincinnati Pilot Program 2026</span>
+        <h1 class="text-5xl md:text-8xl font-black uppercase italic mb-8 leading-none">Your Silence is <span class="gold">Deafening.</span></h1>
+        <p class="text-zinc-400 text-xl md:text-2xl max-w-3xl mx-auto mb-12 font-light">Every missed call is a check handed to your competitor. We build the AI infrastructure to stop the leak.</p>
+        <a href="#apply" class="bg-gold text-black px-12 py-6 font-black uppercase text-2xl inline-block shadow-2xl hover:scale-105 transition-transform">Secure Your Territory</a>
     </header>
 
-    <section class="py-20 bg-zinc-900/50 border-y border-white/5">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+    <section class="py-24 bg-zinc-900/30 border-y border-zinc-800">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             <div>
-                <h2 class="text-4xl font-black mb-6 uppercase">The Cost of <span class="text-red-600">Inaction</span></h2>
-                <p class="text-gray-400 mb-6 italic">If you're on a job site and a lead goes to voicemail, they're gone in 60 seconds.</p>
-                <ul class="space-y-4 font-bold">
-                    <li class="text-red-500 uppercase">✕ 67% Lead Churn on Voicemail</li>
-                    <li class="text-red-500 uppercase">✕ Competition Wins the Speed-to-Lead Race</li>
-                </ul>
-            </div>
-
-            <div class="premium-border bg-black p-8 shadow-2xl">
-                <h3 class="text-center text-[#d4af37] font-bold uppercase mb-8 tracking-widest">Live Loss Projection</h3>
-                <div class="space-y-8">
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase mb-2 text-gray-500">
-                            <span>Missed Calls / Week</span>
-                            <span id="cV" class="text-white">2</span>
-                        </div>
-                        <input type="range" id="cS" min="1" max="25" value="2" class="w-full">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 uppercase leading-tight">The Cost of <span class="text-red-600">Inaction</span></h2>
+                <p class="text-zinc-300 text-lg mb-8 leading-relaxed italic border-l-4 border-red-600 pl-6">"If you're on a job site and a lead goes to voicemail, they are calling your competitor 60 seconds later. Speed to lead is the only metric that matters."</p>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 text-red-500 font-bold uppercase tracking-wide">
+                        <span>✕</span> 67% LEAD CHURN ON VOICEMAIL
                     </div>
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase mb-2 text-gray-500">
-                            <span>Avg Job Value</span>
-                            <span id="vD" class="text-white">$500</span>
-                        </div>
-                        <input type="range" id="vS" min="500" max="5000" step="100" value="500" class="w-full">
-                    </div>
-                    <div class="pt-8 border-t border-white/10 text-center">
-                        <div class="text-5xl font-black gold-glow mb-2">$<span id="aL">52,000</span></div>
-                        <p class="text-[10px] uppercase text-gray-500 font-bold mb-6 tracking-widest">Projected Annual Revenue Leakage</p>
-                        
-                        <div id="logicBox" class="bg-zinc-900 p-4 border-l-2 border-[#d4af37] text-left">
-                            <p class="text-[11px] text-gray-400 leading-tight">
-                                <b class="text-white">LEAK LOGIC:</b> Missing <span id="eC" class="text-white font-bold">2</span> calls/week = <span id="eY" class="text-white font-bold">104</span> lost jobs/year. 
-                                At <span id="eV" class="text-white font-bold">$500</span>/job, you are handing <b class="text-[#d4af37]">$<span id="eT">52,000</span></b> to your competitors.
-                            </p>
-                        </div>
+                    <div class="flex items-center gap-3 text-red-500 font-bold uppercase tracking-wide">
+                        <span>✕</span> SPEED-TO-LEAD VALUE DROPS 80% IN 5 MIN
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section class="py-20 px-6 text-center border-b border-white/5">
-        <h2 class="text-3xl font-black mb-12 uppercase">24/7 AI System Demo</h2>
-        <div class="max-w-4xl mx-auto premium-border p-1 bg-zinc-800 shadow-2xl">
-            <div style="width: 100%; padding-top: 56.25%; position: relative;">
-                <iframe src="https://app.visla.us/embed/1470182013758685650" frameborder="0" allow="fullscreen *" style="position: absolute; top:0; left:0; width:100%; height:100%;"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <section id="apply" class="py-20 bg-[#d4af37] text-black text-center">
-        <div class="max-w-2xl mx-auto px-6">
-            <h2 class="text-4xl font-black mb-4 uppercase">Apply for the Pilot</h2>
-            <p class="font-bold mb-10 opacity-70">Strictly limited to 5 Cincinnati firms.</p>
-            <form action="https://formspree.io/f/xykdkakk" method="POST" class="space-y-4">
-                <input type="text" name="name" placeholder="FULL NAME" class="w-full p-4 bg-black text-white border-none font-bold" required>
-                <input type="text" name="company" placeholder="COMPANY NAME" class="w-full p-4 bg-black text-white border-none font-bold" required>
-                <input type="email" name="email" placeholder="BUSINESS EMAIL" class="w-full p-4 bg-black text-white border-none font-bold" required>
-                <input type="tel" name="phone" placeholder="PHONE NUMBER" class="w-full p-4 bg-black text-white border-none font-bold" required>
-                <button type="submit" class="w-full py-6 bg-zinc-900 text-[#d4af37] font-black text-xl uppercase hover:bg-black transition-all">Request Systems Audit</button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="bg-black py-16 px-6 border-t border-white/10 text-center md:text-left">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
-            <div>
-                <div class="text-xl font-black mb-4 uppercase">TRADEINBOX<span class="text-[#d4af37]">AI</span></div>
-                <p class="text-gray-500 text-sm italic underline decoration-[#d4af37]">Automation First. Revenue Always.</p>
-            </div>
-            <div>
-                <h4 class="text-[#d4af37] font-bold uppercase mb-4 text-xs tracking-widest">Infrastructure</h4>
-                <p class="text-gray-400 text-sm font-bold">(513) 586-6555<br>alan@tradeinboxai.com</p>
-            </div>
-            <div>
-                <h4 class="text-[#d4af37] font-bold uppercase mb-4 text-xs tracking-widest">Cincinnati HQ</h4>
-                <p class="text-gray-400 text-sm font-bold tracking-tight">Serving the Tri-State Area<br>Pilot Program 2026</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const cS = document.getElementById('cS'); 
-        const vS = document.getElementById('vS');
-        const cV = document.getElementById('cV');
-        const vD = document.getElementById('vD');
-        const aL = document.getElementById('aL');
-        const eC = document.getElementById('eC');
-        const eY = document.getElementById('eY');
-        const eV = document.getElementById('eV');
-        const eT = document.getElementById('eT');
-
-        function update() {
-            const calls = parseInt(cS.value);
-            const val = parseInt(vS.value);
-            const yearly = calls * 52;
-            const leak = yearly * val;
-
-            cV.textContent = calls;
-            vD.textContent = '$' + val.toLocaleString();
-            aL.textContent = leak.toLocaleString();
-            
-            eC.textContent = calls;
-            eY.textContent = yearly;
-            eV.textContent = '$' + val.toLocaleString();
-            eT.textContent = leak.toLocaleString();
-        }
-
-        cS.oninput = update;
-        vS.oninput = update;
-        update();
-    </script>
-</body>
-</html>
+            <div class="border-gold bg-black p-10 shadow-2xl rounded-sm">
+                <h3 class="text-center gold font-bold uppercase mb-10 text-sm tracking-[0.3em]">Live Revenue Loss Projection</h3>
+                <div class="space-y-10">
+                    <div>
+                        <div class="flex justify-between text-xs font-black uppercase mb-3 tracking-widest text-zinc-500">
+                            <span>Missed Calls / Week</span>
+                            <span id="cV" class="text-white text-lg">2</span>
+                        </div>
+                        <input type="range" id="cS" min="1" max="25" value="2">
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs font-black uppercase mb-3 tracking-widest text-zinc-500">
+                            <span>Avg Job Value</span>
+                            <span id="vD" class="text-white text-lg">$500</span>
+                        </div>
+                        <input type="range" id="vS" min="500" max="5000" step="100" value="500">
+                    </div>
+                    
+                    <div class="pt-10 border-t border-zinc-800 text-center">
+                        <div class="text-6xl font-black gold gold-glow mb-2">$<span id="aL">52,000</span></div>
+                        <p class="text-xs uppercase text-zinc-500 font-black mb-8 tracking-[0.2em]">Annual Revenue Leakage</p>
+                        
+                        <div class="bg-zinc-900 p-6 text-left border-l-4 border-gold">
+                            <p class="text-[14px] md:text-[15px] text-zinc-300 leading-relaxed">
+                                <strong class="text-white uppercase tracking-wider block mb-2">Leak Logic:</strong> 
+                                Missing <span id="eC" class="text-white font-bold underline decoration-gold">2</span> calls per week translates to <span id="eY" class="text-white font-bold">104</span> lost opportunities per year. 
+                                At an average value of <span id="eV" class="text-white font-
