@@ -7,40 +7,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;900&display=swap" rel="stylesheet">
     <style>
         body{font-family:'Outfit',sans-serif;background:#000;color:#fff;margin:0;scroll-behavior:smooth;}
-        .gold{color:#d4af37;}.bg-gold{background:#d4af37;}.border-gold{border:2px solid #d4af37;}
+        .gold{color:#d4af37;}.bg-gold{background:#d4af37;}
         input[type=range]{-webkit-appearance:none;width:100%;background:#333;height:8px;border-radius:10px;margin:15px 0;cursor:pointer;}
         input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:22px;width:22px;background:#d4af37;border-radius:50%;border:2px solid #fff;}
         .f-in{background:#111!important;border:1px solid #d4af37!important;color:#fff!important;padding:12px;width:100%;margin-bottom:12px;border-radius:0;}
+        .submit-btn{background:#000 !important; color:#d4af37 !important; width:100%; padding:20px; font-weight:900; text-transform:uppercase; font-size:1.25rem; border:2px solid #000; cursor:pointer; display:block; text-align:center;}
     </style>
 </head>
 <body>
     <nav class="p-4 border-b border-zinc-800 flex justify-between items-center sticky top-0 bg-black z-50">
-        <div class="font-black uppercase">TRADEINBOX<span class="gold">AI</span></div>
+        <div class="font-black uppercase tracking-tighter">TRADEINBOX<span class="gold">AI</span></div>
         <a href="tel:+15135866555" class="gold font-bold underline text-sm">(513) 586-6555</a>
     </nav>
+
     <header class="py-16 px-6 text-center max-w-4xl mx-auto">
         <h1 class="text-5xl md:text-7xl font-black uppercase italic mb-4 tracking-tighter">SILENCE IS <span class="gold">EXPENSIVE.</span></h1>
         <p class="text-zinc-400 text-lg mb-8 italic">Every missed call is a job handed to your competitor.</p>
         <a href="#apply" class="bg-gold text-black px-8 py-4 font-black uppercase inline-block shadow-2xl">Stop The Leak</a>
     </header>
-    <section class="py-12 bg-zinc-950 border-y border-zinc-900 px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 text-center text-sm">
+
+    <section class="py-12 bg-zinc-950 border-y border-zinc-900 px-6 text-center">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
             <div class="p-6 border border-zinc-800"><h3 class="text-red-600 font-black mb-2 uppercase">The Problem</h3><p class="text-zinc-500">67% of leads never call back. Silence kills revenue.</p></div>
             <div class="p-6 border border-zinc-800"><h3 class="text-zinc-300 font-black mb-2 uppercase">The Cause</h3><p class="text-zinc-500">You're too busy working to be your own secretary.</p></div>
-            <div class="p-6 border-gold bg-zinc-900"><h3 class="gold font-black mb-2 uppercase text-lg underline">The Solution</h3><p class="text-white font-bold">24/7 AI Gatekeeper books jobs while you work.</p></div>
+            <div class="p-6 border-2 border-gold bg-zinc-900"><h3 class="gold font-black mb-2 uppercase">The Solution</h3><p class="text-white font-bold">24/7 AI Gatekeeper books jobs while you work.</p></div>
         </div>
     </section>
+
     <section class="py-16 px-6 text-center">
         <h2 class="text-2xl font-black mb-8 uppercase italic text-zinc-600">WATCH THE DEMO</h2>
-        <div class="max-w-3xl mx-auto border-gold p-1 bg-zinc-900">
-            <div style="padding-top:56.25%;position:relative;"><iframe src="https://app.visla.us/embed/1470182013758685650" frameborder="0" allow="fullscreen *" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>
+        <div class="max-w-3xl mx-auto border-2 border-gold p-1 bg-zinc-900 shadow-2xl">
+            <div style="padding-top:56.25%;position:relative;"><iframe src="https://app.visla.us/embed/1470182013758685650" frameborder="0" allow="fullscreen" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>
         </div>
     </section>
+
     <section class="py-16 px-6 bg-zinc-950">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-black mb-6 uppercase italic tracking-tighter font-black">ANNUAL REVENUE <span class="text-red-600">LEAKAGE</span></h2>
+            <h2 class="text-3xl font-black mb-6 uppercase italic tracking-tighter">ANNUAL REVENUE <span class="text-red-600">LEAKAGE</span></h2>
             <div class="text-6xl font-black gold mb-6">$<span id="aL">52,000</span></div>
-            <div class="bg-zinc-900 p-6 border-l-4 border-gold text-left max-w-md mx-auto mb-8 text-xs text-zinc-300 italic">
+            <div class="bg-zinc-900 p-6 border-l-4 border-gold text-left max-w-md mx-auto mb-8 text-xs text-zinc-300">
                 Missing <span id="eC" class="gold font-bold">2</span> calls/week = <span id="eY" class="gold font-bold">104</span> lost jobs/year. You lose <strong class="gold underline">$<span id="eT">52,000</span></strong>.
             </div>
             <div class="max-w-xs mx-auto">
@@ -51,23 +56,26 @@
             </div>
         </div>
     </section>
+
     <section id="apply" class="py-20 bg-gold text-black text-center px-6">
         <div class="max-w-md mx-auto">
-            <h2 class="text-4xl font-black mb-2 uppercase tracking-tighter">CONTACT US TO</h2>
+            <h2 class="text-4xl font-black mb-2 uppercase tracking-tighter leading-none">CONTACT US TO</h2>
             <h2 class="text-4xl font-black mb-10 uppercase tracking-tighter underline underline-offset-4">STOP THE LEAK</h2>
             <form action="https://formspree.io/f/xykdkakk" method="POST" class="text-left">
                 <input type="text" name="name" placeholder="Full Name" class="f-in" required>
-                <input type="text" name="company" placeholder="Company" class="f-in" required>
-                <input type="email" name="email" placeholder="Email" class="f-in" required>
-                <input type="tel" name="phone" placeholder="Phone" class="f-in" required>
-                <button type="submit" class="w-full py-5 bg-black text-gold font-black uppercase text-xl mt-4 border-2 border-black">Request Audit</button>
+                <input type="text" name="company" placeholder="Company Name" class="f-in" required>
+                <input type="email" name="email" placeholder="Business Email" class="f-in" required>
+                <input type="tel" name="phone" placeholder="Phone Number" class="f-in" required>
+                <button type="submit" class="submit-btn">Request Systems Audit</button>
             </form>
         </div>
     </section>
+
     <footer class="bg-black py-12 px-6 border-t border-zinc-900 text-center text-zinc-500 font-bold uppercase text-[10px]">
-        <p class="text-white text-sm mb-1">TRADEINBOXAI // CINCINNATI</p>
+        <p class="text-white text-sm mb-1 tracking-widest">TRADEINBOXAI // CINCINNATI</p>
         <p>(513) 586-6555 // alan@tradeinboxai.com</p>
     </footer>
+
     <script>
         const cS=document.getElementById('cS'),vS=document.getElementById('vS'),cV=document.getElementById('cV'),vD=document.getElementById('vD'),aL=document.getElementById('aL'),eC=document.getElementById('eC'),eY=document.getElementById('eY'),eT=document.getElementById('eT');
         function u(){const c=parseInt(cS.value),v=parseInt(vS.value),y=c*52,l=y*v;cV.innerText=c;vD.innerText='$'+v.toLocaleString();aL.innerText=l.toLocaleString();eC.innerText=c;eY.innerText=y;eT.innerText=l.toLocaleString();}
