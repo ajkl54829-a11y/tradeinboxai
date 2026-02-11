@@ -3,67 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TradeInboxAI | Cincinnati AI Safety Net</title>
+    <title>TradeInboxAI | Cincinnati</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Outfit', sans-serif; background: #000; color: #fff; margin:0; }
         .gold { color: #d4af37; }
-        .bg-gold { background: #d4af37; }
-        .border-gold { border: 1px solid rgba(212, 175, 55, 0.4); }
-        input[type=range] { -webkit-appearance: none; width: 100%; background: #333; height: 8px; border-radius: 10px; cursor: pointer; }
+        input[type=range] { -webkit-appearance: none; width: 100%; background: #333; height: 8px; border-radius: 10px; cursor: pointer; margin: 15px 0; }
         input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 24px; width: 24px; background: #d4af37; border-radius: 50%; border: 2px solid #fff; }
     </style>
 </head>
-<body class="bg-black">
+<body>
 
-    <nav class="p-6 border-b border-zinc-800 flex justify-between items-center bg-black sticky top-0 z-50">
-        <div class="text-2xl font-black uppercase tracking-tighter">TRADEINBOX<span class="gold">AI</span></div>
-        <a href="tel:+15135866555" class="gold font-bold text-lg underline underline-offset-4">(513) 586-6555</a>
+    <nav class="p-6 border-b border-zinc-800 flex justify-between items-center">
+        <div class="text-2xl font-black uppercase">TRADEINBOX<span class="gold">AI</span></div>
+        <a href="tel:+15135866555" class="gold font-bold underline">(513) 586-6555</a>
     </nav>
 
-    <header class="py-20 px-6 text-center max-w-5xl mx-auto">
-        <span class="gold font-bold tracking-[0.4em] uppercase block mb-4 text-sm">Cincinnati Pilot 2026</span>
-        <h1 class="text-5xl md:text-7xl font-black uppercase italic mb-6">Your Silence is <span class="gold">Deafening.</span></h1>
-        <p class="text-zinc-400 text-xl mb-10">Stop handing checks to your competitors. Secure your phone line with AI.</p>
-        <a href="#apply" class="bg-gold text-black px-12 py-5 font-black uppercase text-xl inline-block shadow-2xl">Secure Your Territory</a>
+    <header class="py-16 px-6 text-center max-w-4xl mx-auto">
+        <h1 class="text-5xl font-black uppercase italic mb-6 leading-tight">Your Silence is <span class="gold">Deafening.</span></h1>
+        <p class="text-zinc-400 text-lg mb-8">Every missed call is a check handed to your competitor. We stop the leak.</p>
+        <a href="#apply" class="bg-[#d4af37] text-black px-10 py-4 font-black uppercase inline-block">Secure Your Territory</a>
     </header>
 
-    <section class="py-20 bg-zinc-900/30 border-y border-zinc-800">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <section class="py-16 bg-zinc-900/50 border-y border-zinc-800">
+        <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-2 gap-12">
             <div>
-                <h2 class="text-4xl font-black mb-6 uppercase italic">The Cost of <span class="text-red-600">Inaction</span></h2>
-                <div class="space-y-4 text-red-500 font-bold uppercase text-sm">
-                    <p>✕ 67% Lead Churn on Voicemail</p>
-                    <p>✕ Competition Wins the Speed-to-Lead Race</p>
-                </div>
+                <h2 class="text-3xl font-black mb-6 uppercase">The Cost of Inaction</h2>
+                <p class="text-red-500 font-bold uppercase mb-2">✕ 67% Lead Churn on Voicemail</p>
+                <p class="text-red-500 font-bold uppercase">✕ Competition Wins the Race</p>
             </div>
 
-            <div class="border-gold bg-black p-8 shadow-2xl rounded-lg">
-                <h3 class="text-center gold font-bold uppercase mb-8 text-xs tracking-widest">Revenue Loss Projection</h3>
-                <div class="space-y-10">
+            <div class="border border-zinc-800 bg-black p-8 rounded-lg">
+                <div class="space-y-8">
                     <div>
-                        <div class="flex justify-between text-xs font-bold uppercase mb-4 text-zinc-500">
-                            <span>Missed Calls / Week: <span id="cV" class="text-white text-lg ml-2">2</span></span>
-                        </div>
+                        <label class="text-xs font-bold uppercase text-zinc-500">Missed Calls / Week: <span id="cV" class="text-white text-lg">2</span></label>
                         <input type="range" id="cS" min="1" max="25" value="2">
                     </div>
                     <div>
-                        <div class="flex justify-between text-xs font-bold uppercase mb-4 text-zinc-500">
-                            <span>Avg Job Value: <span id="vD" class="text-white text-lg ml-2">$500</span></span>
-                        </div>
+                        <label class="text-xs font-bold uppercase text-zinc-500">Job Value: <span id="vD" class="text-white text-lg">$500</span></label>
                         <input type="range" id="vS" min="500" max="5000" step="100" value="500">
                     </div>
-                    
-                    <div class="pt-10 border-t border-zinc-800 text-center">
-                        <div class="text-6xl font-black gold mb-2">$<span id="aL">52,000</span></div>
-                        <p class="text-[10px] uppercase text-zinc-500 font-black mb-8 tracking-[0.2em]">Annual Revenue Leakage</p>
-                        
-                        <div class="bg-zinc-900 p-6 text-left border-l-4 border-gold">
-                            <p class="text-[15px] text-zinc-300 leading-relaxed">
-                                <strong class="text-white uppercase block mb-2">Leak Logic:</strong> 
-                                Missing <span id="eC" class="gold font-bold">2</span> calls per week translates to <span id="eY" class="gold font-bold">104</span> lost opportunities per year. 
-                                At an average value of <span id="eV" class="gold font-bold">$500</span> per job, you are handing <strong class="gold text-lg">$<span id="eT">52,000</span></strong> in gross revenue directly to your Cincinnati competitors.
+                    <div class="pt-6 border-t border-zinc-800 text-center">
+                        <div class="text-5xl font-black gold mb-2">$<span id="aL">52,000</span></div>
+                        <p class="text-[10px] uppercase text-zinc-500 font-bold mb-6">Annual Revenue Leakage</p>
+                        <div class="bg-zinc-900 p-5 text-left border-l-4 border-[#d4af37]">
+                            <p class="text-sm text-zinc-300 leading-relaxed">
+                                <strong class="text-white uppercase">Leak Logic:</strong> 
+                                Missing <span id="eC" class="gold font-bold">2</span> calls/week = <span id="eY" class="gold font-bold">104</span> lost jobs/year. 
+                                At <span id="eV" class="gold font-bold">$500</span>/job, you lose <strong class="gold">$<span id="eT">52,000</span></strong> to competitors.
                             </p>
                         </div>
                     </div>
@@ -72,23 +60,17 @@
         </div>
     </section>
 
-    <section id="apply" class="py-20 bg-gold text-black text-center">
-        <div class="max-w-xl mx-auto px-6">
-            <h2 class="text-4xl font-black mb-4 uppercase">Apply for the Pilot</h2>
+    <section id="apply" class="py-16 bg-[#d4af37] text-black text-center">
+        <div class="max-w-md mx-auto px-6">
+            <h2 class="text-3xl font-black mb-8 uppercase">Apply for the Pilot</h2>
             <form action="https://formspree.io/f/xykdkakk" method="POST" class="space-y-4">
-                <input type="text" name="name" placeholder="NAME" class="w-full p-4 bg-black text-white font-bold outline-none" required>
-                <input type="text" name="company" placeholder="COMPANY" class="w-full p-4 bg-black text-white font-bold outline-none" required>
-                <input type="email" name="email" placeholder="EMAIL" class="w-full p-4 bg-black text-white font-bold outline-none" required>
-                <input type="tel" name="phone" placeholder="PHONE" class="w-full p-4 bg-black text-white font-bold outline-none" required>
-                <button type="submit" class="w-full py-5 bg-zinc-900 text-gold font-black uppercase text-lg">Request Systems Audit</button>
+                <input type="text" name="name" placeholder="NAME" class="w-full p-4 bg-black text-white font-bold" required>
+                <input type="email" name="email" placeholder="EMAIL" class="w-full p-4 bg-black text-white font-bold" required>
+                <input type="tel" name="phone" placeholder="PHONE" class="w-full p-4 bg-black text-white font-bold" required>
+                <button type="submit" class="w-full py-4 bg-zinc-900 text-[#d4af37] font-black uppercase">Request Audit</button>
             </form>
         </div>
     </section>
-
-    <footer class="bg-black py-16 px-6 border-t border-zinc-900 text-zinc-500 text-xs font-bold uppercase tracking-widest text-center">
-        <p class="mb-2 text-white">TRADEINBOXAI // CINCINNATI</p>
-        <p>(513) 586-6555 // alan@tradeinboxai.com</p>
-    </footer>
 
     <script>
         const cS = document.getElementById('cS'); 
@@ -107,14 +89,13 @@
             const yearly = calls * 52;
             const leak = yearly * val;
 
-            cV.textContent = calls;
-            vD.textContent = '$' + val.toLocaleString();
-            aL.textContent = leak.toLocaleString();
-            
-            eC.textContent = calls;
-            eY.textContent = yearly;
-            eV.textContent = '$' + val.toLocaleString();
-            eT.textContent = leak.toLocaleString();
+            cV.innerText = calls;
+            vD.innerText = '$' + val.toLocaleString();
+            aL.innerText = leak.toLocaleString();
+            eC.innerText = calls;
+            eY.innerText = yearly;
+            eV.innerText = '$' + val.toLocaleString();
+            eT.innerText = leak.toLocaleString();
         }
 
         cS.addEventListener('input', update);
