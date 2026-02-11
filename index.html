@@ -58,95 +58,15 @@
                         <div>
                             <div class="flex justify-between mb-4 uppercase text-xs tracking-widest text-gray-500 font-bold">
                                 <span>Missed Calls / Week</span>
-                                <span id="cV" class="text-white font-bold text-lg">10</span>
+                                <span id="cV" class="text-white font-bold text-lg">2</span>
                             </div>
-                            <input type="range" id="cS" min="1" max="25" value="10" class="w-full h-1 bg-zinc-800 appearance-none accent-[#d4af37]">
+                            <input type="range" id="cS" min="1" max="25" value="2" class="w-full h-1 bg-zinc-800 appearance-none accent-[#d4af37]">
                         </div>
                         <div>
                             <div class="flex justify-between mb-4 uppercase text-xs tracking-widest text-gray-500 font-bold">
                                 <span>Average Job Value</span>
-                                <span id="vD" class="text-white font-bold text-lg">$1,000</span>
+                                <span id="vD" class="text-white font-bold text-lg">$500</span>
                             </div>
-                            <input type="range" id="vS" min="500" max="5000" step="100" value="1000" class="w-full h-1 bg-zinc-800 appearance-none accent-[#d4af37]">
+                            <input type="range" id="vS" min="500" max="5000" step="100" value="500" class="w-full h-1 bg-zinc-800 appearance-none accent-[#d4af37]">
                         </div>
-                        <div class="pt-10 border-t border-white/10 text-center">
-                            <div class="text-6xl font-black gold-glow mb-2">$<span id="aL">260,000</span></div>
-                            <p class="text-xs uppercase tracking-[0.2em] text-gray-500 font-bold">Projected Annual Revenue Leakage</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 text-center">
-        <h2 class="text-4xl font-black mb-16 uppercase italic">The 24/7 AI Safety Net in Action</h2>
-        <div class="max-w-5xl mx-auto premium-border p-2 bg-zinc-800 shadow-2xl">
-            <div style="width: 100%; padding-top: 56.25%; position: relative;">
-                <iframe src="https://app.visla.us/embed/1470182013758685650" frameborder="0" allow="fullscreen *" style="position: absolute; top:0; left:0; width:100%; height:100%;"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <section id="apply" class="py-24 bg-[#d4af37] text-black text-center">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="mb-12">
-                <h2 class="text-5xl font-black uppercase leading-none mb-4">Apply for the Pilot</h2>
-                <p class="text-xl font-bold opacity-80 uppercase tracking-widest">Strictly limited to 5 firms. No competitors.</p>
-            </div>
-            
-            <form action="https://formspree.io/f/xykdkakk" method="POST" class="space-y-4">
-                <div class="grid md:grid-cols-2 gap-4">
-                    <input type="text" name="name" placeholder="FULL NAME" class="w-full p-5 bg-black text-white border-2 border-black/10 focus:border-white outline-none font-bold" required>
-                    <input type="text" name="company" placeholder="COMPANY NAME" class="w-full p-5 bg-black text-white border-2 border-black/10 focus:border-white outline-none font-bold" required>
-                </div>
-                <input type="email" name="email" placeholder="BUSINESS EMAIL" class="w-full p-5 bg-black text-white border-2 border-black/10 focus:border-white outline-none font-bold" required>
-                <input type="tel" name="phone" placeholder="PHONE NUMBER" class="w-full p-5 bg-black text-white border-2 border-black/10 focus:border-white outline-none font-bold" required>
-                <textarea name="message" rows="3" placeholder="DESCRIBE YOUR CURRENT CALL VOLUME" class="w-full p-5 bg-black text-white border-2 border-black/10 focus:border-white outline-none font-bold"></textarea>
-                
-                <button type="submit" class="w-full py-8 bg-zinc-900 text-[#d4af37] font-black text-2xl uppercase hover:bg-black transition-all shadow-2xl">
-                    Request Systems Audit
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="bg-black pt-20 pb-10 px-6 border-t border-white/10">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 mb-16">
-            <div>
-                <div class="text-2xl font-black tracking-tighter mb-6 uppercase">TRADEINBOX<span class="text-[#d4af37]">AI</span></div>
-                <p class="text-gray-500 leading-relaxed italic">The AI Safety Net for Cincinnati's elite trade firms. We stop the leaks so you can scale.</p>
-            </div>
-            <div>
-                <h4 class="text-[#d4af37] font-bold uppercase tracking-widest mb-6">Contact Infrastructure</h4>
-                <ul class="space-y-4 text-gray-400 font-bold">
-                    <li><a href="tel:+15135866555" class="hover:text-white transition-colors">Direct: (513) 586-6555</a></li>
-                    <li><a href="mailto:alan@tradeinboxai.com" class="hover:text-white transition-colors">alan@tradeinboxai.com</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-[#d4af37] font-bold uppercase tracking-widest mb-6">HQ Operations</h4>
-                <p class="text-gray-400 font-bold leading-relaxed">
-                    Cincinnati, Ohio<br>
-                    Serving the Greater Tri-State Area<br>
-                    <span class="text-xs opacity-50 uppercase tracking-tighter font-black">Pilot Program 2026</span>
-                </p>
-            </div>
-        </div>
-        <div class="max-w-6xl mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold text-gray-700 uppercase tracking-widest text-center md:text-left">
-            <p>© 2026 TradeInboxAI. All Rights Reserved.</p>
-            <p>Automation First // Revenue Always</p>
-        </div>
-    </footer>
-
-    <script>
-        const cS = document.getElementById('cS'); const vS = document.getElementById('vS');
-        function calc() {
-            document.getElementById('cV').textContent = cS.value;
-            document.getElementById('vD').textContent = '$' + parseInt(vS.value).toLocaleString();
-            document.getElementById('aL').textContent = (cS.value * 52 * vS.value * 0.5).toLocaleString();
-        }
-        cS.oninput = calc; vS.oninput = calc; calc();
-    </script>
-</body>
-</html>
+                        <div class="pt-
