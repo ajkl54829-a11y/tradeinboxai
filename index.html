@@ -3,78 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TradeInboxAI | Cincinnati AI Safety Net</title>
+    <title>TradeInboxAI | Cincinnati</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Outfit', sans-serif; background: #000; color: #fff; margin:0; scroll-behavior: smooth; }
-        .gold-text { color: #d4af37; }
-        .gold-bg { background-color: #d4af37; }
-        .gold-border { border: 2px solid #d4af37; }
-        input[type=range] { -webkit-appearance: none; width: 100%; background: #333; height: 10px; border-radius: 10px; cursor: pointer; margin: 20px 0; }
+        body { font-family: 'Outfit', sans-serif; background: #000; color: #fff; margin:0; }
+        .gold { color: #d4af37; }
+        input[type=range] { -webkit-appearance: none; width: 100%; background: #333; height: 10px; border-radius: 10px; margin: 20px 0; }
         input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 26px; width: 26px; background: #d4af37; border-radius: 50%; border: 2px solid #fff; }
-        .form-input { background: #111 !important; border: 1px solid #d4af37 !important; color: white !important; font-size: 1.1rem; border-radius: 0; }
-        .form-input:focus { background: #1a1a1a !important; outline: 2px solid #fff; }
+        .f-in { background: #111 !important; border: 1px solid #d4af37 !important; color: white !important; padding: 15px; width: 100%; margin-bottom: 15px; }
     </style>
 </head>
 <body class="bg-black">
-
-    <nav class="p-6 border-b border-zinc-800 flex justify-between items-center bg-black sticky top-0 z-50">
-        <div class="text-2xl font-black uppercase tracking-tighter">TRADEINBOX<span class="gold-text">AI</span></div>
-        <a href="tel:+15135866555" class="gold-text font-bold text-lg underline underline-offset-4">(513) 586-6555</a>
+    <nav class="p-6 border-b border-zinc-800 flex justify-between items-center bg-black">
+        <div class="text-2xl font-black uppercase">TRADEINBOX<span class="gold">AI</span></div>
+        <a href="tel:+15135866555" class="gold font-bold underline">(513) 586-6555</a>
     </nav>
 
-    <header class="py-24 px-6 text-center max-w-5xl mx-auto">
-        <span class="gold-text font-bold tracking-[0.4em] uppercase block mb-4 text-sm">Cincinnati Pilot Program 2026</span>
-        <h1 class="text-6xl md:text-8xl font-black uppercase italic mb-6 leading-none">SILENCE IS <span class="gold-text">EXPENSIVE.</span></h1>
-        <p class="text-zinc-400 text-xl md:text-2xl mb-12 font-light italic">"I'll call you back" is the most expensive sentence in your business.</p>
-        <a href="#apply" class="gold-bg text-black px-12 py-6 font-black uppercase text-2xl inline-block shadow-2xl hover:scale-105 transition-transform">Get Your Systems Audit</a>
+    <header class="py-20 px-6 text-center max-w-4xl mx-auto">
+        <h1 class="text-6xl font-black uppercase italic mb-6">SILENCE IS <span class="gold">EXPENSIVE.</span></h1>
+        <p class="text-zinc-400 text-xl mb-10 italic">Stop handing jobs to your competitors. Secure your phone line.</p>
+        <a href="#apply" class="bg-[#d4af37] text-black px-10 py-5 font-black uppercase text-xl inline-block">Stop The Leak</a>
     </header>
 
-    <section class="py-24 bg-zinc-950 border-y border-zinc-900">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12 text-center md:text-left">
-            <div class="p-8 border border-zinc-800 bg-black">
-                <h3 class="text-xl font-black mb-4 uppercase text-red-600 italic underline underline-offset-8">The Problem</h3>
-                <p class="text-zinc-400 text-lg">Every missed call has a 67% chance of booking a competitor. Silence is a choice to lose money.</p>
+    <section class="py-16 bg-zinc-950 border-y border-zinc-900 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+            <div class="p-8 border border-zinc-800"><h3 class="text-red-600 font-black uppercase mb-4">The Problem</h3><p class="text-zinc-400">Missed calls = Lost leads. 67% won't call back.</p></div>
+            <div class="p-8 border border-zinc-800"><h3 class="text-zinc-300 font-black uppercase mb-4">The Cause</h3><p class="text-zinc-400">You're too busy working to answer the phone.</p></div>
+            <div class="p-8 border-2 border-gold bg-zinc-900"><h3 class="gold font-black uppercase mb-4">The Solution</h3><p class="text-white font-bold">24/7 AI Gatekeeper books jobs while you work.</p></div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-black mb-8 uppercase italic">Annual Revenue <span class="text-red-600">Loss</span></h2>
+            <div class="text-7xl font-black gold mb-8 tracking-tighter">$<span id="aL">52,000</span></div>
+            <div class="bg-zinc-900 p-8 border-l-4 border-gold text-left max-w-xl mx-auto mb-10">
+                <p>Missing <span id="eC" class="gold font-bold">2</span> calls/week = <span id="eY" class="gold font-bold">104</span> lost jobs/year. At $500/job, you lose <strong class="gold">$<span id="eT">52,000</span></strong>.</p>
             </div>
-            <div class="p-8 border border-zinc-800 bg-black">
-                <h3 class="text-xl font-black mb-4 uppercase text-zinc-300 italic underline underline-offset-8">The Cause</h3>
-                <p class="text-zinc-400 text-lg">You are under a sink or on a roof. You can't be a technician and a full-time secretary at once.</p>
-            </div>
-            <div class="p-8 gold-border bg-zinc-900/50 scale-105 shadow-2xl">
-                <h3 class="text-xl font-black mb-4 uppercase gold-text italic underline underline-offset-8">The Solution</h3>
-                <p class="text-white font-bold text-lg">A 24/7 AI Gatekeeper that qualifies leads and books jobs into your calendar while you work.</p>
+            <div class="max-w-md mx-auto">
+                <label class="text-xs font-black uppercase text-zinc-500">Missed Calls/Week: <span id="cV" class="text-white">2</span></label>
+                <input type="range" id="cS" min="1" max="25" value="2">
+                <label class="text-xs font-black uppercase text-zinc-500">Job Value: <span id="vD" class="text-white">$500</span></label>
+                <input type="range" id="vS" min="500" max="5000" step="100" value="500">
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-black">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-4xl md:text-5xl font-black mb-8 uppercase italic leading-tight">Quantify Your <span class="text-red-600">Leakage.</span></h2>
-                <div class="text-7xl font-black gold-text mb-2 tracking-tighter">$<span id="aL">52,000</span></div>
-                <p class="text-xs uppercase text-zinc-500 font-black tracking-[0.3em] mb-8">Estimated Annual Revenue Loss</p>
-            </div>
-            <div class="gold-border bg-zinc-950 p-10 shadow-2xl">
-                <div class="space-y-10">
-                    <div>
-                        <label class="text-xs font-black uppercase text-zinc-400 tracking-widest block mb-2">Missed Calls / Week: <span id="cV" class="text-white text-xl ml-4">2</span></label>
-                        <input type="range" id="cS" min="1" max="25" value="2">
-                    </div>
-                    <div>
-                        <label class="text-xs font-black uppercase text-zinc-400 tracking-widest block mb-2">Average Job Value: <span id="vD" class="text-white text-xl ml-4">$500</span></label>
-                        <input type="range" id="vS" min="500" max="5000" step="100" value="500">
-                    </div>
-                    <div class="bg-zinc-900 p-6 border-l-4 border-[#d4af37] text-zinc-200">
-                        <strong class="text-white uppercase block mb-1">Impact:</strong>
-                        Missing <span id="eC" class="gold-text font-bold">2</span> calls/week = <span id="eY" class="gold-text font-bold">104</span> lost jobs/year. 
-                        You are losing <strong class="gold-text">$<span id="eT">52,000</span></strong> to Cincinnati competitors.
-                    </div>
-                </div>
-            </div>
+    <section id="apply" class="py-20 bg-[#d4af37] text-black text-center px-6">
+        <div class="max-w-xl mx-auto">
+            <h2 class="text-4xl font-black mb-8 uppercase tracking-tighter">CONTACT US TO STOP THE LEAK</h2>
+            <form action="https://formspree.io/f/xykdkakk" method="POST" class="text-left">
+                <input type="text" name="name" placeholder="Full Name" class="f-in" required>
+                <input type="text" name="company" placeholder="Company Name" class="f-in" required>
+                <input type="email" name="email" placeholder="Business Email" class="f-in" required>
+                <input type="tel" name="phone" placeholder="Phone Number" class="f-in" required>
+                <button type="submit" class="w-full py-5 bg-black text-[#d4af37] font-black uppercase text-xl mt-4">Request Systems Audit</button>
+            </form>
         </div>
     </section>
 
-    <section id="apply" class="py-24 gold-bg text-black">
-        <div class="max-w-2xl mx-auto px-6">
-            <h2 class="text-5xl md:text-6xl font-black mb-4 uppercase text-center tracking-tighter leading-none">CONTACT US TO <br>STOP
+    <footer class="bg-black py-16 px-6 border-t border-zinc-900 text-center text-zinc-500 font-bold uppercase text-xs">
+        <p class="text-white text-xl font-black italic mb-2">TRADEINBOXAI // CINCINNATI</p>
+        <p>(513) 586-6555 // alan@tradeinboxai.com</p>
+    </footer>
+
+    <script>
+        const cS = document.getElementById('cS'); const vS = document.getElementById('vS');
+        const cV = document.getElementById('cV'); const vD = document.getElementById('vD');
+        const aL = document.getElementById('aL'); const eC = document.getElementById('eC');
+        const eY = document.getElementById('eY'); const eT = document.getElementById('eT');
+        function update() {
+            const calls = parseInt(cS.value); const val = parseInt(vS.value);
+            const yearly = calls * 52; const leak = yearly * val;
+            cV.textContent = calls; vD.textContent = '$' + val.toLocaleString();
+            aL.textContent = leak.toLocaleString(); eC.textContent = calls;
+            eY.textContent = yearly; eT.textContent = leak.toLocaleString();
+        }
+        cS.addEventListener('input', update); vS.addEventListener('input', update); update();
+    </script>
+</body>
+</html>
