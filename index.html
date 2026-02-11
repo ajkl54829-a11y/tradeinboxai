@@ -4,59 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TradeInboxAI - Never Lose a $1,000 Service Call to Voicemail Again</title>
-    <meta name="description" content="In Cincinnati, if you don't answer, they call your competitor. We build the AI Safety Net that catches every job you miss.">
-    
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@600;900&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #020617; color: #f1f5f9; }
+        h1, h2, h3 { font-family: 'Outfit', sans-serif; }
+        .glass-card { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(14, 165, 233, 0.2); }
+        .sticky-nav { position: sticky; top: 0; z-index: 50; background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(14, 165, 233, 0.1); }
+        .pulse-dot { width: 8px; height: 8px; background: #10b981; border-radius: 50%; display: inline-block; margin-right: 6px; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.1); } }
+        .cta-primary { background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); box-shadow: 0 10px 40px rgba(14, 165, 233, 0.4); }
+        .glow-number { color: #fb923c; font-size: 3.5rem; font-weight: 900; text-shadow: 0 0 30px rgba(251, 146, 60, 0.6); }
+        .form-input { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(148, 163, 184, 0.2); color: #f1f5f9; padding: 1rem; border-radius: 0.5rem; width: 100%; }
+    </style>
+</head>
+<body>
+    <nav class="sticky-nav">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-white">TradeInbox<span class="text-cyan-500">AI</span></div>
+            <a href="tel:+15135866555" class="flex items-center text-lg font-bold text-slate-100 hover:text-sky-400">
+                <span class="pulse-dot"></span>(513) 586-6555
+            </a>
+        </div>
+    </nav>
+
+    <section class="px-6 pt-20 pb-16 text-center">
+        <h1 class="text-4xl md:text-7xl font-black mb-8">NEVER LOSE A <span class="text-sky-400">$1,000</span> CALL AGAIN.</h1>
+        <p class="text-xl text-slate-300 max-w-3xl mx-auto mb-10">Cincinnati trades: If you don't answer, they call your competitor.</p>
+        <a href="#apply" class="cta-primary inline-block px-12 py-5 rounded-xl text-xl font-bold text-white">Apply for the Pilot</a>
+    </section>
+
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto glass-card rounded-2xl p-10 text-center">
+            <h2 class="text-3xl font-bold mb-10">Revenue Leak Calculator</h2>
+            <div class="space-y-10">
+                <input type="range" id="cS" min="1" max="20" value="10" class="w-full accent-sky-500">
+                <p class="text-white">Missed Calls: <span id="cV" class="text-cyan-400 font-bold">10</span></p>
+                <input type="range" id="vS" min="200" max="2000" step="100" value="800" class="w-full accent-sky-500">
+                <p class="text-white">Avg Job Value: <span id="vD" class="text-cyan-400 font-bold">$800</span></p>
+                <div class="glow-number" id="aL">$208,000</div>
+                <p class="text-slate-400">Annual Revenue Lost</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 max-w-5xl mx-auto">
+        <div style="width: 100%; padding-top: 56.25%; position: relative;">
+            <iframe src="https://app.visla.us/embed/1470182013758685650" frameborder="0" allow="fullscreen *" style="position: absolute; top:0; left:0; width:100%; height:100%; border-radius:16px;"></iframe>
+        </div>
+    </section>
+
+    <section id="apply" class="py-20 px-6 max-w-2xl mx-auto">
+        <div class="glass-card p-10 rounded-2xl">
+            <h2 class="text-3xl font-bold text-center mb-8 text-white">Apply for Early Access</h2>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+                <input type="text" name="name" placeholder="Full Name" class="form-input" required>
+                <input type="text" name="business" placeholder="Business Name" class="form-input" required>
+                <input type="email" name="email" placeholder="Email" class="form-input" required>
+                <button type="submit" class="cta-primary w-full py-5 rounded-xl text-xl font-bold text-white">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center border-t border-slate-800">
+        <p class="text-slate-500">alan@tradeinboxai.com | (513) 586-6555</p>
+    </footer>
+
+    <script>
+        const cS = document.getElementById('cS'); const vS = document.getElementById('vS');
+        function calc() {
+            document.getElementById('cV').textContent = cS.value;
+            document.getElementById('vD').textContent = '$' + parseInt(vS.value).toLocaleString();
+            document.getElementById('aL').textContent = '$' + (cS.value * 52 * vS.value * 0.5).toLocaleString();
         }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #020617;
-            color: #f1f5f9;
-            position: relative;
-            overflow-x: hidden;
-        }
-        
-        /* Subtle grid background */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(14, 165, 233, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(14, 165, 233, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
-            pointer-events: none;
-            z-index: 0;
-        }
-        
-        h1, h2, h3, h4 {
-            font-family: 'Outfit', sans-serif;
-        }
-        
-        /* Glassmorphism */
-        .glass {
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(148, 163, 184, 0.1);
-        }
-        
-        .glass-card {
-            background: rgba(15, 23, 42, 0.8);
-            backdro
+        cS.oninput = calc; vS.oninput = calc; calc();
+    </script>
+</body>
+</html>
